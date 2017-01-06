@@ -1,31 +1,32 @@
 package fcu.iecs.oop.pokemon;
 
-public abstract class Pokemon {
-	private String name;
-	private PokemonType type;
-	private int cp;
+public abstract class Pokemon implements Fightable {
 
-	public Pokemon(String name, PokemonType type, int cp) {
-		this.name = name;
+	@Override
+	public void attack() {
+		// TODO Auto-generated method stub
+
+	}
+	String nickName;
+	PokemonType type;
+	int cp;
+	public Pokemon(String nickName, PokemonType type, int cp) {
+		super();
+		this.nickName = nickName;
 		this.type = type;
 		this.cp = cp;
 	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public PokemonType getType() {
+	public PokemonType gettype(){
 		return this.type;
 	}
-	
-	public int getCp(){
-		return cp;
+	public String getnickName(){
+		return this.nickName;
 	}
-	
-	public void setCp(int cp){
+	public void setnickName(String nickName){
+		this.nickName = nickName;
+	}
+	public void setcp(int cp){
 		this.cp = cp;
 	}
-	
-	public abstract void attack();
+
 }
